@@ -5,7 +5,7 @@ public class SampleDeployClass {
         helloMethod();
 
         Account acc = new Account(Name= 'fred', Phone='12345');
-        insert acc; //cc hit the trigger  - This is changed on 10/03/2015
+        insert acc; //cc hit the trigger  - This is changed on 10/03/2015 - Github change
 
         // Check that the trigger properly set the phone field:
         Account retAcc = [select id, phone from Account where id=:acc.id][0];
