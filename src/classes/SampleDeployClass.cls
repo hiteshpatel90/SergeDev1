@@ -4,8 +4,8 @@ public class SampleDeployClass {
     public static testmethod void t1() {
         helloMethod();
 
-        Account acc = new Account(Name= 'fred');
-        insert acc; // hit the trigger
+        Account acc = new Account(Name= 'fred', Phone='12345');
+        insert acc; //cc hit the trigger  - This is changed on 10/03/2015
 
         // Check that the trigger properly set the phone field:
         Account retAcc = [select id, phone from Account where id=:acc.id][0];
@@ -13,7 +13,7 @@ public class SampleDeployClass {
     }
 
     public static String getPhone() {
-        return 'SamplePhone#';
+        return '12345';
     }
     
     public static void helloMethod() {
